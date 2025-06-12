@@ -10,6 +10,18 @@
     "chromeLaunchConfig": {
       "args": ["--no-sandbox"],
       "timeout": 60000
-    }
+    },
+    "defaults": {
+      "timeout": 60000,
+      "page": {
+        "waitUntil": "load",
+        "wait": 10000
+      }
+    },
+    "actions":[
+      "wait for element #onetrust-accept-btn-handler to be visible",
+      "click element #onetrust-accept-btn-handler",
+      "wait 3000"
+    ]
   }
 }

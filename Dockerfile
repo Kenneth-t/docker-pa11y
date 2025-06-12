@@ -1,5 +1,5 @@
 # Pa11y Dashboard Docker Container
-FROM --platform=linux/amd64 node:18-slim
+FROM node:18-slim
 
 LABEL maintainer="Rob Loach <robloach@gmail.com>"
 
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
   libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 \
   libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 \
   libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 \
-  build-essential libx11-dev libglib2.0-dev libgbm-dev \
+  build-essential libx11-dev libglib2.0-dev libgbm-dev libxshmfence1 \
   libnss3 lsb-release xdg-utils wget net-tools git --no-install-recommends && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
 
